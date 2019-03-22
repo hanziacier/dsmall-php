@@ -4,15 +4,15 @@ return [
 // 数据库类型
 'type'           => 'mysql',
 // 服务器地址
-'hostname'       => $_SERVER['DB_HOST'],
+'hostname'       => $_SERVER['DB_HOST'].','.$_SERVER['DB_HOST_R'],
 // 数据库名
-'database'       => 'ds_mall',
+'database'       => 'ds_mall,dsmall',
 // 用户名
-'username'       => $_SERVER['DB_USER'],
+'username'       => $_SERVER['DB_USER'].','.$_SERVER['DB_USER_R'],
 // 密码
-'password'       => $_SERVER['DB_PASSWORD'],
+'password'       => $_SERVER['DB_PASSWORD'].','.$_SERVER['DB_PASSWORD_R'],
 // 端口
-'hostport'       => $_SERVER['DB_PORT'],
+'hostport'       => $_SERVER['DB_PORT'].','.$_SERVER['DB_PORT_R'],
 // 连接dsn
 'dsn'            => '',
 // 数据库连接参数
@@ -24,9 +24,9 @@ return [
 // 数据库调试模式
 'debug'          => true,
 // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
-'deploy'         => 0,
+'deploy'         => 1,
 // 数据库读写是否分离 主从式有效
-'rw_separate'    => false,
+'rw_separate'    => true,
 // 读写分离后 主服务器数量
 'master_num'     => 1,
 // 指定从服务器序号
