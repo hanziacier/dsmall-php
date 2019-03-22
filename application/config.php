@@ -200,11 +200,6 @@ return [
     // +----------------------------------------------------------------------
 
     'session'                => [
-        'id'             => '',
-        // SESSION_ID的提交变量,解决flash上传跨域
-        'var_session_id' => '',
-        // SESSION 前缀
-        'prefix'         => 'dsmall_sess_',
         // 驱动方式 支持redis memcache memcached
         'type'           => 'redis',
         // 是否自动开启 SESSION
@@ -214,6 +209,8 @@ return [
         'password'      => $_SERVER['REDIS_PASSWORD'],
         'select'        => 0,
         'expire'        => 3600,
+        'timeout'       => 0,
+        'session_name'  => 'dsmall_sess_'
     ],
 
     // +----------------------------------------------------------------------
