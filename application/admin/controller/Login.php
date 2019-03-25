@@ -32,7 +32,7 @@ class Login extends Controller {
                 $this->error($login_validate->getError());
             }
 
-            if (!captcha_check(input('post.captcha'),"",(array)Config::get('captcha'))) {
+            if (!captcha_check(input('post.captcha'),"",(array)\think\Config::get('captcha'))) {
                 //验证失败
                 ds_json_encode(10001,'验证码错误');
             }
