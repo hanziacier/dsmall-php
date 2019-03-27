@@ -6,7 +6,7 @@ return [
 // 服务器地址
 'hostname'       => $_SERVER['DB_HOST'].','.$_SERVER['DB_HOST_R'],
 // 数据库名
-'database'       => 'ds_mall,dsmall',
+'database'       => 'ds_mall,ds_mall',
 // 用户名
 'username'       => $_SERVER['DB_USER'].','.$_SERVER['DB_USER_R'],
 // 密码
